@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 할 일</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">TASK BOARD</p>
+        <h1>오늘, 무엇을 해낼까요?</h1>
+        <p class="subtitle">작은 한 걸음도 기록하면 훨씬 선명해집니다.</p>
+      </header>
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">새 할 일</label>
+        <input id="task-input" type="text" maxlength="120" placeholder="할 일을 입력하세요" autocomplete="off" required />
+        <button type="submit">추가</button>
+      </form>
+      <section class="panel" aria-label="할 일 목록">
+        <div class="panel-header"><h2>내 목록</h2><span id="progress">0 / 0 완료</span></div>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-message" class="empty-message">아직 할 일이 없어요. 첫 번째 항목을 추가해 보세요.</p>
+      </section>
+      <button id="clear-completed" class="clear-button" type="button">완료한 항목 지우기</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
